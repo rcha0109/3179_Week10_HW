@@ -1,0 +1,67 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height": 500,
+    "width": 500,
+    "title": "The Link Between Human Development and Gender Gaps",
+    "data": {
+      "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/GII_cleaned.csv"
+    },
+
+    "selection": {
+    "obstacle_selection": {"type": "multi", "fields": ["MainObstacle"], "bind": "legend"}
+  },
+    "transform": [
+          {
+            "lookup": "Country",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/Obstacles_cleaned.csv"
+              },
+              "key": "Country",
+              "fields": ["MainObstacle"]
+            }
+          }
+        ],
+
+    "mark": {"type": "circle", "stroke": "white", "strokeWidth": 1, "opacity": 0.5},
+    "encoding": {
+      "x": {
+        "field": "Gender Inequality Index",
+        "type": "quantitative",
+        "axis": {"tickCount": 10, "format": ".0%"},
+        "scale": {"reverse": true, "domain":[0, 1]}
+      },
+      "y": {
+        "field": "Human Development Index Female",
+        "type": "quantitative",
+        "axis": { "tickCount": 10, "format": ".0%"},
+        "scale": {"domain":[0, 1]}
+      },
+      "size": {"field": "Mean Years of Schooling Female", "type": "quantitative",  "scale": {"range": [30, 800]}
+    },
+
+    "fill": {"condition": 
+        {"test": "datum.MainObstacle != null", "field": "MainObstacle",  "type": "nominal", "scale": {"domain":["Unequal Responsibilities", "Unequal Employment Opportunities", "Religion and Culture", "Different Treatment Growing Up"], "range": ["#1f77b4", "#00bfae", "#ff7f0e", "#9467bd"]}},
+        "value": "lightgray"
+      },
+
+    "order": {
+      "condition": {"test": "datum.MainObstacle != null", "value": 1},
+      "value": 0
+    },
+
+    "color": {"field": "MainObstacle",  "type": "nominal", "scale": {"domain":["Unequal Responsibilities", "Unequal Employment Opportunities", "Religion and Culture", "Different Treatment Growing Up"], "range": ["#1f77b4", "#00bfae", "#ff7f0e", "#9467bd"]}},
+
+    "opacity": {
+      "condition": {"selection": "obstacle_selection", "value": 0.8},
+      "value": 0.25
+    },
+
+      "tooltip": [
+        {"field": "Country", "type": "nominal"},
+        {"field": "Gender Inequality Index", "type": "quantitative"}
+      ]
+  
+    }
+  }
+  
