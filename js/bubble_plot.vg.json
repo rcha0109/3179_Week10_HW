@@ -1,48 +1,49 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "height": 500,
-    "width": 500,
-    "title": "The Link Between Human Development and Gender Gaps",
-    "data": {
-      "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/GII_cleaned.csv"
-    },
-
-    "selection": {
-    "obstacle_selection": {"type": "multi", "fields": ["MainObstacle"], "bind": "legend"}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 500,
+  "width": 500,
+  "title": "The Link Between Human Development and Gender Gaps",
+  "data": {
+    "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/GII_cleaned.csv"
   },
-    "transform": [
-          {
-            "lookup": "Country",
-            "from": {
-              "data": {
-                "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/Obstacles_cleaned.csv"
-              },
-              "key": "Country",
-              "fields": ["MainObstacle"]
-            }
+
+  "transform": [
+        {
+          "lookup": "Country",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/Obstacles_cleaned.csv"
+            },
+            "key": "Country",
+            "fields": ["MainObstacle"]
           }
-        ],
+        },
+        {
+          "calculate": "datum.MainObstacle == null ? 'Not Available' : datum.MainObstacle",
+          "as": "Main Obstacle"
+        }
+      
+      ],
+
+  "layer" : [{
 
     "mark": {"type": "circle", "stroke": "white", "strokeWidth": 1, "opacity": 0.5},
+    "selection": {
+      "obstacle_selection": {"type": "multi", "fields": ["Main Obstacle"], "bind": "legend"}
+    },
     "encoding": {
       "x": {
-        "field": "Gender Inequality Index",
-        "type": "quantitative",
-        "axis": {"tickCount": 10, "format": ".0%"},
-        "scale": {"reverse": true, "domain":[0, 1]}
-      },
-      "y": {
         "field": "Human Development Index Female",
+        "title": "Female Human Development Index (HDI)",
         "type": "quantitative",
-        "axis": { "tickCount": 10, "format": ".0%"},
+        "axis": { "tickCount": 10},
         "scale": {"domain":[0, 1]}
       },
-      "size": {"field": "Mean Years of Schooling Female", "type": "quantitative",  "scale": {"range": [30, 800]}
-    },
-
-    "fill": {"condition": 
-        {"test": "datum.MainObstacle != null", "field": "MainObstacle",  "type": "nominal", "scale": {"domain":["Unequal Responsibilities", "Unequal Employment Opportunities", "Religion and Culture", "Different Treatment Growing Up"], "range": ["#1f77b4", "#00bfae", "#ff7f0e", "#9467bd"]}},
-        "value": "lightgray"
+      "y": {
+        "field": "Gender Inequality Index",
+        "type": "quantitative",
+        "axis": {"tickCount": 10},
+        "scale": {"reverse": true, "domain":[0, 1]}
       },
 
     "order": {
@@ -50,18 +51,72 @@
       "value": 0
     },
 
-    "color": {"field": "MainObstacle",  "type": "nominal", "scale": {"domain":["Unequal Responsibilities", "Unequal Employment Opportunities", "Religion and Culture", "Different Treatment Growing Up"], "range": ["#1f77b4", "#00bfae", "#ff7f0e", "#9467bd"]}},
+    "fill": {"condition": 
+      {"test": "datum.MainObstacle != null", "field": "Main Obstacle", "title": "Main Perceived Obstacle", "type": "nominal", "scale": {"domain":["Unequal Responsibilities", "Unequal Employment Opportunities", "Religion and Culture", "Different Treatment Growing Up"], "range": ["#1f77b4", "#00bfae", "#ff7f0e", "#9467bd"]}},
+      "value": "lightgray"
+    },
+
+    "color": {"field": "Main Obstacle",  "type": "nominal", "scale": {"domain":["Unequal Responsibilities", "Unequal Employment Opportunities", "Religion and Culture", "Different Treatment Growing Up"], "range": ["#1f77b4", "#00bfae", "#ff7f0e", "#9467bd"]}},
 
     "opacity": {
       "condition": {"selection": "obstacle_selection", "value": 0.8},
       "value": 0.25
     },
 
+    "size": {"field": "Mean Years of Schooling Female", "title": "Mean Years of Schooling (Female)", "type": "quantitative",  "scale": {"range": [30, 800]}},
+
+    
       "tooltip": [
         {"field": "Country", "type": "nominal"},
-        {"field": "Gender Inequality Index", "type": "quantitative"}
+        {"field": "Main Obstacle", "type": "nominal", "title": "Main Perceived Obstacle"},
+        {"field": "Gender Inequality Index", "type": "quantitative", "title": "Gender Inequality Index"},
+        {"field": "Human Development Index Female", "type": "quantitative", "title": "Human Development Index (Female)"},
+        {"field": "Mean Years of Schooling Female", "type": "quantitative", "title": "Mean Years of Schooling (Female)"}
       ]
+    }
+  },
+
+  {
+    "data": {"values": [{"x": 0.8}]},
+    "mark": {"type": "rule", "color": "darkgray", "size": 2, "opacity": 0.55, "strokeDash": [6, 4]},
+    "encoding": {
+      "x": {"field": "x", "type": "quantitative"}
+    }
+  },
+
+  {
+    "data": {"values": [{"x": 0.7}]},
+    "mark": {"type": "rule", "color": "darkgray", "size": 2, "opacity": 0.55, "strokeDash": [6, 4]},
+    "encoding": {
+      "x": {"field": "x", "type": "quantitative"}
+    }
+  },
+
+  {
+    "data": {"values": [{"x": 0.55}]},
+    "mark": {"type": "rule", "color": "darkgray", "size": 2, "opacity": 0.55, "strokeDash": [6, 4]},
+    "encoding": {
+      "x": {"field": "x", "type": "quantitative"}
+    }
+  },
   
+  {
+    "data": {
+      "values": [
+        {"x": 0.875, "label": "Very High"},
+        {"x": 0.75, "label": "High"},
+        {"x": 0.625, "label": "Medium"},
+        {"x": 0.275, "label": "Low"},
+        {"x": 0.03, "label": "HDI:"}
+      ]
+    },
+    "mark": {"type": "text", "align": "center", "baseline": "bottom", "dy": -15, "color": "gray"},
+    "encoding": {
+      "x": {"field": "x", "type": "quantitative"},
+      "y": {"value": 10},
+      "text": {"field": "label"}
     }
   }
-  
+
+]
+}
