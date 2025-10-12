@@ -21,8 +21,11 @@
         {
           "calculate": "datum.MainObstacle == null ? 'Not Available' : datum.MainObstacle",
           "as": "Main Obstacle"
+        },
+        {
+          "calculate": "datum['Mean Years of Schooling Female'] + ' years'",
+          "as": "Schooling Years"
         }
-      
       ],
 
   "layer" : [{
@@ -70,8 +73,8 @@
         {"field": "Country", "type": "nominal"},
         {"field": "Main Obstacle", "type": "nominal", "title": "Main Perceived Obstacle"},
         {"field": "Gender Inequality Index", "type": "quantitative", "title": "Gender Inequality Index"},
-        {"field": "Human Development Index Female", "type": "quantitative", "title": "Human Development Index (Female)"},
-        {"field": "Mean Years of Schooling Female", "type": "quantitative", "title": "Mean Years of Schooling (Female)"}
+        {"field": "Human Development Index Female", "type": "quantitative", "title": "Female HDI"},
+        {"field": "Schooling Years", "type": "nominal", "title": "Mean Female Schooling"}
       ]
     }
   },
