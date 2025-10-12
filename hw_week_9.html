@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gender Equality Visualisations</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+</head>
+
+<body>
+
+  <div class="page">
+    <h1>Gender Equality Visualisations</h1>
+      <p>Comparing Human Development Index, Gender Inequality, and main perceived obstacles across countries.</p>
+
+
+      <h2>Main Perceived Obstacles to Gender Equality</h2>
+      <p>Hover over the countries to see details.</p>
+      <div id="choroplethMap" class="vis-container"></div>
+
+
+      <h2>HDI vs Gender Inequality</h2>
+      <p>Select an obstacle from the legend to highlight.</p>
+      <div id="bubbleChart" class="vis-container"></div>
+ 
+
+    <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+        <p>This visualisation is created by <a href="https://github.com/rcha0109/3179_Week10_HW" target="_blank">Rebecca Chan Teng Yee
+          </a>
+    </div>
+  
+  </div>
+
+  <script type="text/javascript">
+    var specChoroplethMap = "./js/choropleth_map_obstacles.json";
+    var specBubbleChart = "./js/bubble_plot.vg.json";
+
+    vegaEmbed('#choroplethMap', specChoroplethMap, { actions: false })
+      .then(function (result) {
+        window.worldMapView = result.view;
+      }).catch(console.error);
+
+    vegaEmbed('#bubbleChart', specBubbleChart, { actions: false })
+      .then(function (result) {
+        window.bubbleChartView = result.view;
+      }).catch(console.error);
+  </script>
+
+</body>
+</html>
