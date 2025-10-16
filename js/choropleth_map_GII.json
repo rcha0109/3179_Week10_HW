@@ -54,7 +54,7 @@
               "field": "gii",
               "type": "quantitative",
               "scale": {"scheme": "reds"},
-              "legend": {"title": "GII"}
+              "legend": {"title": "Gender Inequality Index"}
             },
             "tooltip": [
               {"field": "country", "type": "nominal", "title": "Country"},
