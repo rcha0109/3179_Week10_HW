@@ -1,0 +1,156 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/GII_long_cleaned.csv",
+    "format": {"type": "csv"}
+  },
+  "vconcat": [
+    {
+      "title": {"text": "Gender Inequality Index by Country from 1990 to 2025", "anchor": "start"},
+      "width": "container",
+      "height": 300,
+      "projection": {"type": "equalEarth"},
+      "transform": [
+        {"filter": {"param": "year_brush"}},
+        {
+          "lookup": "iso3",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/js/WorldMapWithGraticuleAndOcean.topojson",
+              "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+            },
+            "key": "properties.ISO_A3_EH"
+          },
+          "as": "geo"
+        }
+      ],
+      "layer": [
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+            "format": {"type": "topojson", "feature": "oceans"}
+          },
+          "mark": {"type": "geoshape", "fill": "skyblue"}
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/js/WorldMapWithGraticuleAndOcean.topojson",
+            "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+          },
+          "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/js/WorldMapWithGraticuleAndOcean.topojson",
+            "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+          },
+          "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+        },
+        {
+          "mark": {"type": "geoshape", "stroke": "white"},
+          "encoding": {
+            "shape": {"field": "geo", "type": "geojson"},
+            "color": {
+              "field": "gii",
+              "type": "quantitative",
+              "scale": {"scheme": "reds"},
+              "legend": {"title": "GII"}
+            },
+            "tooltip": [
+              {"field": "country", "type": "nominal", "title": "Country"},
+              {"field": "year", "type": "ordinal", "title": "Year"},
+              {"field": "gii", "type": "quantitative", "title": "Gender Inequality Index"}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "width": "container",
+      "height": 60,
+      "mark": "line",
+      "title": "Use this line chart to filter out the data based on time",
+      "params": [
+        {
+          "name": "year_brush",
+          "select": {"type": "interval", "encodings": ["x"]}
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "axis": {"title": "Year"}
+        },
+        "y": {
+          "field": "gii",
+          "aggregate": "mean",
+          "title": "Gender Inequality Index"
+        },
+        "color": {"value": "#d73027"}
+      }
+    },
+    {
+      "width": "container",
+      "height": 170,
+      "mark": {
+        "type": "line",
+        "point": true
+      },
+      "title": "Average Gender Inequality Index by Region",
+      "params": [
+        {
+          "name": "year_brush",
+          "select": {"type": "interval", "encodings": ["x"], "resolve": "union"}
+        }
+      ],
+      "transform": [
+        {"filter": {"param": "year_brush"}},
+        {
+          "aggregate": [
+            {"op": "mean", "field": "gii", "as": "avg_gii"}
+          ],
+          "groupby": ["country", "year"]
+        },
+        {"filter": "datum.country != null"}
+      ],
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "axis": {"title": "Year"}
+        },
+        "y": {
+          "field": "avg_gii",
+          "type": "quantitative",
+          "title": "Gender Inequality Index"
+        },
+        "color": {
+          "field": "country",
+          "type": "nominal",
+          "title": "Region",
+          "scale": {
+              "domain": [
+                "Arab States",
+                "East Asia and the Pacific",
+                "Europe and Central Asia",
+                "Latin America and the Caribbean",
+                "South Asia",
+                "Sub-Saharan Africa"
+              ],
+              "range": ["#1b9e77", "#ff7f0e", "#7570b3", "#e7298a", "#66a61e", "#e6ab02"]
+            }
+        },
+        "tooltip": [
+          {"field": "country", "type": "nominal", "title": "Region"},
+          {"field": "year", "type": "ordinal", "title": "Year"},
+          {"field": "avg_gii", "type": "quantitative", "title": "Gender Inequality Index"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "title": {"font": "sans-serif", "fontSize": 14},
+    "axis": {"labelFont": "sans-serif", "titleFont": "sans-serif"}
+  }
+}
