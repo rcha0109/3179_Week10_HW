@@ -1,27 +1,28 @@
-body *{
+* {
     font-family: 'Open Sans', sans-serif;
-	box-sizing: border-box;
-	padding: 0;
-}
-
-h1 {
-    font-weight: 900;
-	text-align: center;
-	margin-bottom: 30px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
     background-color: white;
-	margin: 0;
-    padding: 0;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #1b1b1b;
+    text-align: center; /* center main heading */
 }
 
 .page {
-    width: 850px;
+    max-width: 850px;      /* keeps container from being too wide */
+    width: 90%;            /* responsive width */
     background-color: white;
-    margin: auto;
-    padding: 50px;
-    padding-top: 35px;
+    margin: 0 auto;        /* center horizontally */
+    padding: 50px 20px 50px 20px; /* top, sides, bottom */
 }
 
 .chart-card {
@@ -30,23 +31,44 @@ body {
     margin-bottom: 25px;
     border-radius: 8px;
     background-color: #f9f9f9;
+    text-align: center;    /* center content inside the card */
 }
 
 .chart-card h2 {
-    text-align: center;
     margin-bottom: 10px;
 }
 
 .chart-card p {
-    text-align: center;
     margin-bottom: 15px;
 }
 
+/* Center Vega charts */
 .vis-container {
-    width: 100%;
+    display: inline-block; /* shrink-wrap to content */
+    max-width: 100%;
     height: 500px;
+    margin: 0 auto;        /* center horizontally */
+}
+
+.section {
+  margin-bottom: 60px; /* space between sections */
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section p {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .vis-container {
-    width: 100%;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+  margin: 0 auto; /* center charts horizontally */
 }
+
