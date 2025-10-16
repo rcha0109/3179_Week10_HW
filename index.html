@@ -21,15 +21,19 @@
 <body>
 
   <div class="page">
-    <h1>Gender Equality Visualisations</h1>
-      <p>Comparing Human Development Index, Gender Inequality, and main perceived obstacles across countries.</p>
+    <h1>Global Gender Gap</h1>
 
+      <padding></padding>
+      <h2>Gender Inequality Across Countries and Years</h2>
+      <p>Hover over the countries to see details.</p>
+      <div id="choroplethGIIMap" class="vis-container"></div>
 
+      <padding></padding>
       <h2>Main Perceived Obstacles to Gender Equality</h2>
       <p>Hover over the countries to see details.</p>
       <div id="choroplethMap" class="vis-container"></div>
 
-
+      <padding></padding>
       <h2>HDI vs Gender Inequality</h2>
       <p>Select an obstacle from the legend to highlight.</p>
       <div id="bubbleChart" class="vis-container"></div>
@@ -45,6 +49,12 @@
   <script type="text/javascript">
     var specChoroplethMap = "./js/choropleth_map_obstacles.json";
     var specBubbleChart = "./js/bubble_plot.vg.json";
+    var specGIIMap = "./js/choropleth_map_GII.json"
+
+    vegaEmbed('#choroplethGIIMap', specGIIMap, { actions: false })
+      .then(function (result) {
+        window.GIIMapView = result.view;
+      }).catch(console.error);
 
     vegaEmbed('#choroplethMap', specChoroplethMap, { actions: false })
       .then(function (result) {
