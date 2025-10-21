@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Women's Representation: Leadership vs Overall Workforce",
+  "width": "container",
+  "height": 370,
+  "data": {
+    "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/WorkforceRepresentation.csv"
+  },
+  "transform": [
+    {
+      "fold": ["Leadership", "All"],
+      "as": ["Category", "Value"]
+    },
+    {
+      "lookup": "Industry",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/WorkforceRepresentation.csv"
+        },
+        "key": "Industry",
+        "fields": ["Drop to the top"]
+      }
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "Industry",
+      "type": "nominal",
+      "sort": {"field": "All", "order": "descending"},
+      "title": null
+    },
+    "x": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "Percentage of Women (%)"
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "rule", "color": "#bdbdbd", "strokeWidth": 4},
+      "encoding": {
+        "y": {"field": "Industry"},
+        "x": {"field": "All"},
+        "x2": {"field": "Leadership"},
+        "tooltip": [
+          {"field": "Industry", "title": "Industry"},
+          {"field": "All", "title": "All Women (%)", "format": ".1f"},
+          {"field": "Leadership", "title": "Leadership (%)", "format": ".1f"},
+          {"field": "Drop to the top", "title": "Drop to the Top (pp)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "point", "filled": true, "size": 250, "opacity": 1},
+      "encoding": {
+        "x": {"field": "Value"},
+        "y": {"field": "Industry"},
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "scale": {"domain": ["All", "Leadership"], "range": ["#f9b4d2", "#d12d74"]},
+          "legend": {"title": null}
+        },
+        "tooltip": [
+          {"field": "Industry", "title": "Industry"},
+          {"field": "Category", "title": "Category"},
+          {"field": "Value", "title": "Women (%)", "format": ".1f"},
+          {"field": "Drop to the top", "title": "Drop to the Top (pp)", "format": ".1f"}
+        ]
+      }
+    }
+  ]
+}

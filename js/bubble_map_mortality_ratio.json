@@ -1,0 +1,129 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Maternal Mortality Ratio by Country (2023)",
+  "width": "container",
+  "height": 400,
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+        "format": {"type": "topojson", "feature": "oceans"}
+      },
+      "mark": {"type": "geoshape", "fill": "skyblue"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/rcha0109/3179_W9/main/js/ne_110m_admin_0_countries.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
+        {
+          "lookup": "properties.ISO_A3_EH",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/country_maternal_mortality_ratio.csv"
+            },
+            "key": "Country Code",
+            "fields": ["Value", "Country Name"]
+          }
+        },
+        {
+          "lookup": "properties.ISO_A3_EH",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/countries_region.csv"
+            },
+            "key": "alpha-3",
+            "fields": ["region_group"]
+          }
+        },
+        {"calculate": "datum.Value == null ? 'Data not available for ' + datum.properties.NAME : datum.Value", "as": "MMR"}
+      ],
+      "selection": {
+        "hover_country": {"type": "single", "on": "mouseover", "empty": "none", "clear": "mouseout"}
+      },
+      "mark": {"type": "geoshape"},
+      "encoding": {
+        "color": {
+          "condition": [
+            {"test": "datum.Value == null", "value": "lightgray"}
+          ],
+          "field": "region_group",
+          "type": "nominal",
+          "title": "Region",
+          "scale": {
+            "domain": ["East Asia & Pacific","Europe & Central Asia","Latin America & Caribbean","Middle East & North Africa","North America","South Asia","Sub-Saharan Africa"],
+            "range": ["#cba3e1","#8B4513","#abdda4","#fee08b","#3288bd","#fdae61","#ffc0cb"]
+          }
+        },
+        "tooltip": [
+          {"field": "Country Name", "title": "Country"},
+          {"field": "MMR", "title": "MMR (per 100k live births)"},
+          {"field": "region_group", "title": "Region"}
+        ],
+        "stroke": {"condition": {"selection": "hover_country", "value": "white"}, "value": "white"},
+        "strokeWidth": {"condition": {"selection": "hover_country", "value": 2}, "value": 0.5}
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/rcha0109/3179_W9/main/js/ne_110m_admin_0_countries.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
+        {
+          "lookup": "properties.ISO_A3_EH",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/country_maternal_mortality_ratio.csv"
+            },
+            "key": "Country Code",
+            "fields": ["Value"]
+          }
+        },
+        {"filter": "datum.Value == null"},
+        {"calculate": "'Data not available for ' + datum.properties.NAME", "as": "note"}
+      ],
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": null},
+      "encoding": {
+        "tooltip": {"field": "note", "type": "nominal"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"Country Name":"East Asia & Pacific","Value":66,"Latitude":5,"Longitude":120},
+          {"Country Name":"Europe & Central Asia","Value":11,"Latitude":50,"Longitude":65},
+          {"Country Name":"Latin America & Caribbean","Value":77,"Latitude":-10,"Longitude":-60},
+          {"Country Name":"Middle East & North Africa","Value":47,"Latitude":25,"Longitude":29},
+          {"Country Name":"North America","Value":16,"Latitude":45,"Longitude":-95},
+          {"Country Name":"South Asia","Value":120,"Latitude":25,"Longitude":75},
+          {"Country Name":"Sub-Saharan Africa","Value":448,"Latitude":-2.5,"Longitude":23.5}
+        ]
+      },
+      "mark": {"type": "circle", "color": "white", "stroke": "darkgrey", "strokeWidth": 1, "fillOpacity": 0.8},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "size": {"field": "Value", "type": "quantitative", "scale": {"range": [200,2000]}},
+        "tooltip": [
+          {"field": "Country Name", "title": "Region"},
+          {"field": "Value", "title": "MMR (per 100k live births)"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/rcha0109/3179_W9/main/js/WorldMapWithGraticules.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+    }
+  ],
+  "config": {
+    "legend": {"labelFontSize": 12,"titleFontSize": 14},
+    "title": {"fontSize": 18,"fontWeight": "bold"},
+    "view": {"stroke": null}
+  }
+}

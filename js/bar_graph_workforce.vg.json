@@ -1,0 +1,27 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/WorkforceRepresentation.csv"
+    },
+    "title": "Drop to the Top by Industry",
+    "width": "container",
+    "height": 300,
+    "mark": "bar",
+    "encoding": {
+      "y": {
+        "field": "Industry",
+        "type": "nominal",
+        "sort": "-x",
+        "title": null
+      },
+      "x": {
+        "field": "Drop to the top",
+        "type": "quantitative",
+        "title": "Drop to the Top (percentage points)"
+      },
+      "tooltip": [
+        {"field": "Industry"},
+        {"field": "Drop to the top", "title": "Drop to the Top (pp)", "format": ".1f"}
+      ]
+    }
+  }

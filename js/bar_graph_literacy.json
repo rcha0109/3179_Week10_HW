@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 500,
+  "width": 700,
+  "title": "Adult Literacy Rates by Income Group (2024)",
+  "data": {
+    "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/income_and_literacy_2024.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Country Name",
+      "type": "nominal",
+      "title": "Income Group",
+      "sort": ["Low income", "Lower middle income", "Middle income", "Upper middle income"]
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "Literacy Rate (%)"
+    },
+    "color": {
+      "field": "Indicator Name",
+      "type": "nominal",
+      "title": "Category",
+      "scale": {
+        "domain": ["Female Literacy", "Male Literacy"],
+        "range": ["#e377c2", "#1f77b4"]
+      }
+    },
+    "xOffset": {"field": "Indicator Name"}
+  },
+  "config": {
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    },
+    "bar": {
+      "cornerRadiusTopLeft": 3,
+      "cornerRadiusTopRight": 3
+    }
+  }
+}
