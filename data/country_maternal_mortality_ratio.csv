@@ -1,4 +1,4 @@
-﻿Indicator Name,Indicator Code,Country Name,Country Code,Year,Value,Disaggregation
+Indicator Name,Indicator Code,Country Name,Country Code,Year,Value,Disaggregation,Latitude,Longitude
 "Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,World,WLD,2023,197,"female, Modeled"
 "Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Afghanistan,AFG,2023,521,"female, Modeled"
 "Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Albania,ALB,2023,7,"female, Modeled"
@@ -194,28 +194,10 @@
 "Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,"Yemen, Rep.",YEM,2023,118,"female, Modeled"
 "Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Zambia,ZMB,2023,85,"female, Modeled"
 "Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Zimbabwe,ZWE,2023,358,"female, Modeled"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Bahrain,BHR,2023,0,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Barbados,BRB,2023,178.3,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Belize,BLZ,2023,78.83,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,British Virgin Islands,VGB,2023,415,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Bulgaria,BGR,2023,8.742,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Canada,CAN,2023,9.38,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Cayman Islands,CYM,2023,0,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Costa Rica,CRI,2023,7.96,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Cuba,CUB,2023,38.7,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Dominica,DMA,2023,0,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Ecuador,ECU,2023,35.621,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,El Salvador,SLV,2023,26.8,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Grenada,GRD,2023,208.2,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Guatemala,GTM,2023,84,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Honduras,HND,2023,65,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Iraq,IRQ,2023,29.6,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Jamaica,JAM,2023,136.9,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Lesotho,LSO,2023,530,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Paraguay,PRY,2023,84.6,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Senegal,SEN,2023,153,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,St. Kitts and Nevis,KNA,2023,207.9,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Switzerland,CHE,2023,2.5,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Trinidad and Tobago,TTO,2023,7.8,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Turks and Caicos Islands,TCA,2023,0,"female, National"
-"Maternal mortality ratio (national estimate, per 100,000 live births)",SH.STA.MMRT.NE,Uruguay,URY,2023,19.1,"female, National"
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,East Asia & Pacific,EAS,2023,66,"female, Modeled",5,120
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Europe & Central Asia,ECS,2023,11,"female, Modeled",50,65
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Latin America & Caribbean,LCN,2023,77,"female, Modeled",-10,-60
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Middle East & North Africa,MEA,2023,47,"female, Modeled",25,29
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,North America,NAC,2023,16,"female, Modeled",45,-95
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,South Asia,SAS,2023,120,"female, Modeled",25,75
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Sub-Saharan Africa,SSF,2023,448,"female, Modeled",-2.5,23.5
