@@ -1,0 +1,11 @@
+﻿Indicator Name,Indicator Code,Country Name,Country Code,Year,Value,Disaggregation
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Africa Eastern and Southern,AFE,2023,268,"female, Modeled"
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Africa Western and Central,AFW,2023,650,"female, Modeled"
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Arab World,ARB,2023,121,"female, Modeled"
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,East Asia & Pacific,EAS,2023,66,"female, Modeled"
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Europe & Central Asia,ECS,2023,11,"female, Modeled"
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Latin America & Caribbean,LCN,2023,77,"female, Modeled"
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Middle East & North Africa,MEA,2023,47,"female, Modeled"
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,North America,NAC,2023,16,"female, Modeled"
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,South Asia,SAS,2023,120,"female, Modeled"
+"Maternal mortality ratio (modeled estimate, per 100,000 live births)",SH.STA.MMRT,Sub-Saharan Africa,SSF,2023,448,"female, Modeled"
