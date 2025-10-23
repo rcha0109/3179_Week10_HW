@@ -1,70 +1,277 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gender Equality Visualisations</title>
+  <title>The Global Gender Gap Index</title>
+
+  <!-- Vega Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
 
+  <!-- PureCSS for Grid -->
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ"
+    crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
 
+  <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-
 </head>
 
 <body>
 
   <div class="page">
-    <h1>Global Gender Gap</h1>
+    <!-- <h1 class="main-title">The Global Gender Gap</h1>
+    <img src="asset/banner.jpg" alt="Banner Image"> -->
 
-      <padding></padding>
-      <h2>Gender Inequality Across Countries and Years</h2>
-      <p>Hover over the countries to see details.</p>
-      <div id="choroplethGIIMap" class="vis-container"></div>
+    <div class="banner-container">
+      <img src="asset/banner.jpg" alt="Banner Image" class="banner-image">
+      <h1 class="main-title">The Global Gender Gap</h1>
+    </div>
 
-      <padding></padding>
-      <h2>Main Perceived Obstacles to Gender Equality</h2>
-      <p>Hover over the countries to see details.</p>
-      <div id="choroplethMap" class="vis-container"></div>
+    <!-- SECTION 1 -->
+    <div class="chart-title">
+      <h3 class="pink-gradient-banner">Gender Inequality Across Countries and Year</h3>
+      <p class="subtitle">Across the decades, gender inequality has narrowed — yet no region has achieved true parity</p>
+    </div>
+    
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="choroplethGIIMap" class="vis-container"></div>
+      </div>
+    </div>
 
-      <padding></padding>
-      <h2>HDI vs Gender Inequality</h2>
-      <p>Select an obstacle from the legend to highlight.</p>
-      <div id="bubbleChart" class="vis-container"></div>
- 
+    <hr class="hr3">
+
+    <!-- SECTION 2 -->
+    <div class="chart-title">
+      <h3 class="pink-gradient-banner">The Unequal Reality of Maternal Health</h3>
+      <p class="subtitle">Uncovering maternal mortality ratios (MMR) across regions and countries.</p>
+      <p style = "font-size:14px; font-family:'Nunito Sans', sans-serif; line-height:1.5;">
+        The maternal mortality ratio (MMR) is the number of maternal deaths per 100,000 live births. 
+        High MMR reflects <strong style="font-weight: 700;">gender gaps in healthcare</strong> and autonomy. It signals inequities in education, resources, and societal decision-making.
+      </p>
+    </div>
+
+
+    <div class="pure-g">
+      
+      <div class="pure-u-1-1">
+
+        <div style="position: relative;">
+          <div id="mortalityMap" class="vis-container"></div>
+
+
+          <div style="position: absolute; bottom: 80px; left:540px; width: 90px; 
+            font-family: 'Nunito Sans', sans-serif; font-size: 12px; line-height: 1.5; 
+            background-color: rgba(214, 208, 208, 0.6); padding: 5px; text-align: left;">
+            <p>Early marriage and high fertility rates increase pregnancy risk</p>
+          </div>
+
+          <div style="position: absolute; bottom: 240px; left:287px; width: 90px; 
+          font-family: 'Nunito Sans', sans-serif; font-size: 12px; line-height: 1.5; max-height: 60px; 
+          background-color: rgba(214, 208, 208, 0.6); text-align: left; padding-left: 5px; padding-bottom: 35px;">
+          <p>Strong gender policies improve maternal outcomes</p>
+          </div>
+  
+          <div style="position: absolute; width: 2px; height: 60px; background-color: rgba(133, 132, 135, 0.924); bottom: 140px; left: 516px; transform: rotate(130deg); box-shadow: 0 0 0 1px rgba(238, 236, 236, 0.872);"></div>
+          
+          <div style="position: absolute; width: 2px; height: 170px; background-color: rgba(133, 132, 135, 0.924); bottom: 232px; left: 458px; transform: rotate(246deg); box-shadow: 0 0 0 1px rgba(238, 236, 236, 0.872);"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <hr class="hr3">
+
+    <!-- SECTION 3 -->
+
+    <div class="chart-title">
+      <h3 class="pink-gradient-banner">Climbing Uneven Ladders</h3>
+      <p class="subtitle">How women’s share in leadership trails behind their overall workforce presence.</p>
+    </div>
+
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="workforceChart" class="vis-container"></div>
+      </div>
+    </div>
+
+    <div class="chart-second-title">
+      <h3>The Drop to the Top</h3>
+      <p class="subtitle">How women’s representation shrinks from workforce to leadership across industries.</p>
+    </div>
+
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div style="position: relative;">
+          <div id="dropToTopChart" class="vis-container"></div>
+
+            <div style="position: absolute; bottom: 100px; left: 200px; width: 95px; 
+                          font-family: 'Nunito Sans', sans-serif; font-size: 12px; line-height: 1.5; 
+                          background-color: rgba(206, 204, 204, 0.6); padding-left: 7px; text-align: left;">
+                <p>Physical norms reinforce gender stereotypes</p>
+            </div>
+            
+            <div style="position: absolute; width: 2px; height: 46px; background-color: rgba(171, 171, 171, 0.663); bottom: 56px; left: 250px;"></div>
+
+      </div>
+        </div>
+        
+      <div class="pure-u-1-3">
+        <div class="description description-right" style="font-size:14px; font-family:'Nunito Sans', sans-serif; line-height:1.5;">
+          <p>
+            Many women start the climb, but <span style="color:#ea5da1;" >few reach the top</span>. 
+            They dominate Health Care, Education, and Retail — sectors shaped by traditional caregiving roles.
+            Even in these fields, barriers still hinder leadership advancement.
+          </p>
+          <p>
+            By contrast, leadership gaps remain wide in Construction, Oil, and Transportation.
+            Male-dominated cultures and rigid structures limit women’s advancement.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="hr3">
+
+
+    <!-- SECTION 4 -->
+    <div class="chart-title">
+      <h3 class="pink-gradient-banner">The Learning Curve of Inequality</h3>
+      <p class="subtitle">Investigating gender gaps in adult literacy across global income groups.</p>
+    </div>
+
+    <div class="pure-g">
+
+
+      <div class="pure-u-1-3">
+        <div class="description description-right" style="font-size:14px; font-family:'Nunito Sans', sans-serif; line-height:1.5;">
+          <p>
+            Women in low-income regions face steep literacy disadvantages versus men.  
+            Middle- and high-income countries narrow gaps, yet disparities remain.  
+          </p>
+          <p>
+            Limited education access <strong>reinforces stereotypes</strong>, constraining empowerment and autonomy.
+            It entrenches social norms, limiting career and leadership opportunities.
+          </p>
+        </div>
+      </div>
+
+      <div class="pure-u-2-3">
+        <div id="literacyChart" class="vis-container"></div>
+      </div>
+
+
+    </div>
+    
+
+    <hr class="hr3">
+
+    <!-- SECTION 5 -->
+   <div class="chart-title">
+      <h3 class="pink-gradient-banner">What Holds Equality Back?</h3>
+      <p class="subtitle">A cross-country examination of perceived obstacles to gender equality.</p>
+    </div>
+
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div style="position: relative;"> 
+      
+          <div id="obstaclesChart" class="vis-container" style="height: 100%; width: 100%;"></div>
+
+          <div style="position: absolute; top: 70px; right:50px; width: 180px; 
+            font-family: 'Nunito Sans', sans-serif; font-size: 12px; line-height: 1.5; 
+            background-color: rgba(231, 223, 223, 0.5); padding: 7px; text-align: left;">
+            <p>Click an obstacle to highlight it on the charts.</p>
+          </div>
+
+                
+          <div style="position: absolute; bottom: 200px; left:60px; width: 120px; 
+            font-family: 'Nunito Sans', sans-serif; font-size: 12px; line-height: 1.5; 
+            background-color: rgba(231, 223, 223, 0.6); padding: 5px; text-align: left;">
+            <p>
+              Conflict increases women’s vulnerability in Yemen.
+            </p>
+          </div>
+
+          <div style="position: absolute;  width: 2px; height: 46px; background-color: rgba(171, 171, 171, 0.663); bottom: 154px; left: 151px;;"></div>
+
+      
+          <div style="position: absolute; bottom: 60px; right: 30px; width: 400px; 
+                      font-family: 'Nunito Sans', sans-serif; font-size: 14px; line-height: 1.5; 
+                      padding: 10px; text-align: left;">
+            <p>
+              In very high HDI regions, <span style="color:#1f77b4;" >unequal responsibilities</span> dominate.
+              Formal barriers fade, yet deep-rooted norms sustain gendered divisions of unpaid labour across households.
+            </p>
+            <p>
+              In high HDI countries, <span style="color:#00bfae">workplace inequality</span> persists despite strong 
+              education access. Policy gaps like limited childcare and parental leave imbalance reinforce disadvantage.
+            </p>
+            <p>
+              Conversely, in lower HDI regions, <span style="color:#ff7f0e">religion and culture</span> remain dominant 
+              barriers. Enduring social norms restrict women’s education and participation, reinforcing dependence. 
+            </p>
+            <p>
+              Interestingly, only the U.S. cited "<span style="color:#9467bd">different treatment growing up</span>."
+              Americans view inequality as rooted in early socialisation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="hr3">
+
+    <!-- FOOTER -->
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
-        <p>This visualisation is created by <a href="https://github.com/rcha0109/3179_Week10_HW" target="_blank">Rebecca Chan Teng Yee
-          </a>
+        <p>This visualisation is published by 
+          <a href="https://github.com/rcha0109/3179_Week10_HW" target="_blank">Rebecca Chan Teng Yee</a> on 23 Oct 2025.
+        </p>
+        <p>Sources: <br>
+          <a href="https://hdr.undp.org/data-center/documentation-and-downloads" target="_blank">Gender Inequality Index by UNDP</a> . 
+          <a href="https://genderdata.worldbank.org/en/indicator/sh-sta-mmrt" target="_blank">Maternal Mortality Ratio by World Bank</a> . 
+          <a href="https://economicgraph.linkedin.com/content/dam/me/economicgraph/en-us/PDF/the-state-of-women-in-leadership.pdf" target="_blank">The State of Women in Leadership by LinkedIn</a> . 
+          <a href="https://genderdata.worldbank.org/en/indicator/se-adt" target="_blank">Literacy Rate by World Bank</a> . 
+          <a href="https://focus2030.org/Global-gender-equality-survey-the-most-striking-data-visualizations" target="_blank">Gender Equality Survey by Focus2023</a> . 
+          <a href="https://www.kaggle.com/datasets/andradaolteanu/country-mapping-iso-continent-region" target="_blank">Country Mapping - ISO, Continent & Region by Andrada on Kaggle</a>
+        </p>
+
+      </div>
     </div>
-  
   </div>
 
+
+
   <script type="text/javascript">
-    var specChoroplethMap = "./js/choropleth_map_obstacles.json";
-    var specBubbleChart = "./js/bubble_plot.vg.json";
-    var specGIIMap = "./js/choropleth_map_GII.json"
+    var specGIIMap = "./js/choropleth_map_GII.json";
 
-    vegaEmbed('#choroplethGIIMap', specGIIMap, { actions: false })
-      .then(function (result) {
-        window.GIIMapView = result.view;
-      }).catch(console.error);
+    var specWorkForceChart = "./js/dot_plot_workforce.vg.json";
+    var specDropToTopChart = "./js/bar_graph_workforce.vg.json";
+    var specMortalityMap = "./js/bubble_map_mortality_ratio.json";
+    var specLiteracyChart = "./js/bar_graph_literacy.json";
 
-    vegaEmbed('#choroplethMap', specChoroplethMap, { actions: false })
-      .then(function (result) {
-        window.worldMapView = result.view;
-      }).catch(console.error);
+    var specObstaclesCharts = "./js/obstacles_to_equality.json";
 
-    vegaEmbed('#bubbleChart', specBubbleChart, { actions: false })
-      .then(function (result) {
-        window.bubbleChartView = result.view;
-      }).catch(console.error);
+    vegaEmbed('#choroplethGIIMap', specGIIMap, { actions: false }).catch(console.error);
+
+    vegaEmbed('#workforceChart', specWorkForceChart, { actions: false }).catch(console.error);
+    vegaEmbed('#dropToTopChart', specDropToTopChart, { actions: false }).catch(console.error);
+    vegaEmbed('#mortalityMap', specMortalityMap, { actions: false }).catch(console.error);
+    vegaEmbed('#literacyChart', specLiteracyChart, { actions: false }).catch(console.error);
+    
+    vegaEmbed('#obstaclesChart', specObstaclesCharts, { actions: false }).catch(console.error);
+
   </script>
 
 </body>
