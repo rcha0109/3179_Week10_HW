@@ -86,35 +86,35 @@ AGO,Angola,SSA,2023,0.515
 ATG,Antigua and Barbuda,LAC,2021,0.225
 ATG,Antigua and Barbuda,LAC,2022,0.224
 ATG,Antigua and Barbuda,LAC,2023,0.24
-ZZE.AS,Arab States,,1995,0.68
-ZZE.AS,Arab States,,1996,0.687
-ZZE.AS,Arab States,,1997,0.682
-ZZE.AS,Arab States,,1998,0.682
-ZZE.AS,Arab States,,1999,0.665
-ZZE.AS,Arab States,,2000,0.661
-ZZE.AS,Arab States,,2001,0.655
-ZZE.AS,Arab States,,2002,0.643
-ZZE.AS,Arab States,,2003,0.639
-ZZE.AS,Arab States,,2004,0.63
-ZZE.AS,Arab States,,2005,0.626
-ZZE.AS,Arab States,,2006,0.616
-ZZE.AS,Arab States,,2007,0.605
-ZZE.AS,Arab States,,2008,0.604
-ZZE.AS,Arab States,,2009,0.599
-ZZE.AS,Arab States,,2010,0.588
-ZZE.AS,Arab States,,2011,0.582
-ZZE.AS,Arab States,,2012,0.564
-ZZE.AS,Arab States,,2013,0.559
-ZZE.AS,Arab States,,2014,0.556
-ZZE.AS,Arab States,,2015,0.548
-ZZE.AS,Arab States,,2016,0.537
-ZZE.AS,Arab States,,2017,0.537
-ZZE.AS,Arab States,,2018,0.539
-ZZE.AS,Arab States,,2019,0.541
-ZZE.AS,Arab States,,2020,0.537
-ZZE.AS,Arab States,,2021,0.537
-ZZE.AS,Arab States,,2022,0.537
-ZZE.AS,Arab States,,2023,0.539
+ZZE.AS,Middle East & North Africa,,1995,0.68
+ZZE.AS,Middle East & North Africa,,1996,0.687
+ZZE.AS,Middle East & North Africa,,1997,0.682
+ZZE.AS,Middle East & North Africa,,1998,0.682
+ZZE.AS,Middle East & North Africa,,1999,0.665
+ZZE.AS,Middle East & North Africa,,2000,0.661
+ZZE.AS,Middle East & North Africa,,2001,0.655
+ZZE.AS,Middle East & North Africa,,2002,0.643
+ZZE.AS,Middle East & North Africa,,2003,0.639
+ZZE.AS,Middle East & North Africa,,2004,0.63
+ZZE.AS,Middle East & North Africa,,2005,0.626
+ZZE.AS,Middle East & North Africa,,2006,0.616
+ZZE.AS,Middle East & North Africa,,2007,0.605
+ZZE.AS,Middle East & North Africa,,2008,0.604
+ZZE.AS,Middle East & North Africa,,2009,0.599
+ZZE.AS,Middle East & North Africa,,2010,0.588
+ZZE.AS,Middle East & North Africa,,2011,0.582
+ZZE.AS,Middle East & North Africa,,2012,0.564
+ZZE.AS,Middle East & North Africa,,2013,0.559
+ZZE.AS,Middle East & North Africa,,2014,0.556
+ZZE.AS,Middle East & North Africa,,2015,0.548
+ZZE.AS,Middle East & North Africa,,2016,0.537
+ZZE.AS,Middle East & North Africa,,2017,0.537
+ZZE.AS,Middle East & North Africa,,2018,0.539
+ZZE.AS,Middle East & North Africa,,2019,0.541
+ZZE.AS,Middle East & North Africa,,2020,0.537
+ZZE.AS,Middle East & North Africa,,2021,0.537
+ZZE.AS,Middle East & North Africa,,2022,0.537
+ZZE.AS,Middle East & North Africa,,2023,0.539
 ARG,Argentina,LAC,1990,0.489
 ARG,Argentina,LAC,1991,0.452
 ARG,Argentina,LAC,1992,0.45
@@ -1203,32 +1203,32 @@ DOM,Dominican Republic,LAC,2020,0.431
 DOM,Dominican Republic,LAC,2021,0.423
 DOM,Dominican Republic,LAC,2022,0.422
 DOM,Dominican Republic,LAC,2023,0.417
-ZZF.EAP,East Asia and the Pacific,,1998,0.391
-ZZF.EAP,East Asia and the Pacific,,1999,0.389
-ZZF.EAP,East Asia and the Pacific,,2000,0.387
-ZZF.EAP,East Asia and the Pacific,,2001,0.381
-ZZF.EAP,East Asia and the Pacific,,2002,0.375
-ZZF.EAP,East Asia and the Pacific,,2003,0.369
-ZZF.EAP,East Asia and the Pacific,,2004,0.368
-ZZF.EAP,East Asia and the Pacific,,2005,0.366
-ZZF.EAP,East Asia and the Pacific,,2006,0.366
-ZZF.EAP,East Asia and the Pacific,,2007,0.365
-ZZF.EAP,East Asia and the Pacific,,2008,0.367
-ZZF.EAP,East Asia and the Pacific,,2009,0.364
-ZZF.EAP,East Asia and the Pacific,,2010,0.366
-ZZF.EAP,East Asia and the Pacific,,2011,0.377
-ZZF.EAP,East Asia and the Pacific,,2012,0.37
-ZZF.EAP,East Asia and the Pacific,,2013,0.361
-ZZF.EAP,East Asia and the Pacific,,2014,0.357
-ZZF.EAP,East Asia and the Pacific,,2015,0.349
-ZZF.EAP,East Asia and the Pacific,,2016,0.343
-ZZF.EAP,East Asia and the Pacific,,2017,0.335
-ZZF.EAP,East Asia and the Pacific,,2018,0.324
-ZZF.EAP,East Asia and the Pacific,,2019,0.318
-ZZF.EAP,East Asia and the Pacific,,2020,0.316
-ZZF.EAP,East Asia and the Pacific,,2021,0.316
-ZZF.EAP,East Asia and the Pacific,,2022,0.316
-ZZF.EAP,East Asia and the Pacific,,2023,0.315
+ZZF.EAP,East Asia & Pacific,,1998,0.391
+ZZF.EAP,East Asia & Pacific,,1999,0.389
+ZZF.EAP,East Asia & Pacific,,2000,0.387
+ZZF.EAP,East Asia & Pacific,,2001,0.381
+ZZF.EAP,East Asia & Pacific,,2002,0.375
+ZZF.EAP,East Asia & Pacific,,2003,0.369
+ZZF.EAP,East Asia & Pacific,,2004,0.368
+ZZF.EAP,East Asia & Pacific,,2005,0.366
+ZZF.EAP,East Asia & Pacific,,2006,0.366
+ZZF.EAP,East Asia & Pacific,,2007,0.365
+ZZF.EAP,East Asia & Pacific,,2008,0.367
+ZZF.EAP,East Asia & Pacific,,2009,0.364
+ZZF.EAP,East Asia & Pacific,,2010,0.366
+ZZF.EAP,East Asia & Pacific,,2011,0.377
+ZZF.EAP,East Asia & Pacific,,2012,0.37
+ZZF.EAP,East Asia & Pacific,,2013,0.361
+ZZF.EAP,East Asia & Pacific,,2014,0.357
+ZZF.EAP,East Asia & Pacific,,2015,0.349
+ZZF.EAP,East Asia & Pacific,,2016,0.343
+ZZF.EAP,East Asia & Pacific,,2017,0.335
+ZZF.EAP,East Asia & Pacific,,2018,0.324
+ZZF.EAP,East Asia & Pacific,,2019,0.318
+ZZF.EAP,East Asia & Pacific,,2020,0.316
+ZZF.EAP,East Asia & Pacific,,2021,0.316
+ZZF.EAP,East Asia & Pacific,,2022,0.316
+ZZF.EAP,East Asia & Pacific,,2023,0.315
 ECU,Ecuador,LAC,1990,0.648
 ECU,Ecuador,LAC,1991,0.64
 ECU,Ecuador,LAC,1992,0.629
@@ -1397,32 +1397,32 @@ ETH,Ethiopia,SSA,2020,0.502
 ETH,Ethiopia,SSA,2021,0.497
 ETH,Ethiopia,SSA,2022,0.498
 ETH,Ethiopia,SSA,2023,0.497
-ZZG.ECA,Europe and Central Asia,,1998,0.446
-ZZG.ECA,Europe and Central Asia,,1999,0.427
-ZZG.ECA,Europe and Central Asia,,2000,0.405
-ZZG.ECA,Europe and Central Asia,,2001,0.387
-ZZG.ECA,Europe and Central Asia,,2002,0.372
-ZZG.ECA,Europe and Central Asia,,2003,0.368
-ZZG.ECA,Europe and Central Asia,,2004,0.351
-ZZG.ECA,Europe and Central Asia,,2005,0.348
-ZZG.ECA,Europe and Central Asia,,2006,0.339
-ZZG.ECA,Europe and Central Asia,,2007,0.321
-ZZG.ECA,Europe and Central Asia,,2008,0.315
-ZZG.ECA,Europe and Central Asia,,2009,0.309
-ZZG.ECA,Europe and Central Asia,,2010,0.307
-ZZG.ECA,Europe and Central Asia,,2011,0.301
-ZZG.ECA,Europe and Central Asia,,2012,0.29
-ZZG.ECA,Europe and Central Asia,,2013,0.284
-ZZG.ECA,Europe and Central Asia,,2014,0.276
-ZZG.ECA,Europe and Central Asia,,2015,0.27
-ZZG.ECA,Europe and Central Asia,,2016,0.26
-ZZG.ECA,Europe and Central Asia,,2017,0.246
-ZZG.ECA,Europe and Central Asia,,2018,0.242
-ZZG.ECA,Europe and Central Asia,,2019,0.232
-ZZG.ECA,Europe and Central Asia,,2020,0.234
-ZZG.ECA,Europe and Central Asia,,2021,0.23
-ZZG.ECA,Europe and Central Asia,,2022,0.226
-ZZG.ECA,Europe and Central Asia,,2023,0.226
+ZZG.ECA,Europe & Central Asia,,1998,0.446
+ZZG.ECA,Europe & Central Asia,,1999,0.427
+ZZG.ECA,Europe & Central Asia,,2000,0.405
+ZZG.ECA,Europe & Central Asia,,2001,0.387
+ZZG.ECA,Europe & Central Asia,,2002,0.372
+ZZG.ECA,Europe & Central Asia,,2003,0.368
+ZZG.ECA,Europe & Central Asia,,2004,0.351
+ZZG.ECA,Europe & Central Asia,,2005,0.348
+ZZG.ECA,Europe & Central Asia,,2006,0.339
+ZZG.ECA,Europe & Central Asia,,2007,0.321
+ZZG.ECA,Europe & Central Asia,,2008,0.315
+ZZG.ECA,Europe & Central Asia,,2009,0.309
+ZZG.ECA,Europe & Central Asia,,2010,0.307
+ZZG.ECA,Europe & Central Asia,,2011,0.301
+ZZG.ECA,Europe & Central Asia,,2012,0.29
+ZZG.ECA,Europe & Central Asia,,2013,0.284
+ZZG.ECA,Europe & Central Asia,,2014,0.276
+ZZG.ECA,Europe & Central Asia,,2015,0.27
+ZZG.ECA,Europe & Central Asia,,2016,0.26
+ZZG.ECA,Europe & Central Asia,,2017,0.246
+ZZG.ECA,Europe & Central Asia,,2018,0.242
+ZZG.ECA,Europe & Central Asia,,2019,0.232
+ZZG.ECA,Europe & Central Asia,,2020,0.234
+ZZG.ECA,Europe & Central Asia,,2021,0.23
+ZZG.ECA,Europe & Central Asia,,2022,0.226
+ZZG.ECA,Europe & Central Asia,,2023,0.226
 FJI,Fiji,EAP,1995,0.486
 FJI,Fiji,EAP,1996,0.482
 FJI,Fiji,EAP,1997,0.477
@@ -2371,40 +2371,40 @@ LAO,Laos,EAP,2020,0.464
 LAO,Laos,EAP,2021,0.476
 LAO,Laos,EAP,2022,0.476
 LAO,Laos,EAP,2023,0.475
-ZZH.LAC,Latin America and the Caribbean,,1990,0.555
-ZZH.LAC,Latin America and the Caribbean,,1991,0.544
-ZZH.LAC,Latin America and the Caribbean,,1992,0.536
-ZZH.LAC,Latin America and the Caribbean,,1993,0.534
-ZZH.LAC,Latin America and the Caribbean,,1994,0.529
-ZZH.LAC,Latin America and the Caribbean,,1995,0.521
-ZZH.LAC,Latin America and the Caribbean,,1996,0.514
-ZZH.LAC,Latin America and the Caribbean,,1997,0.508
-ZZH.LAC,Latin America and the Caribbean,,1998,0.495
-ZZH.LAC,Latin America and the Caribbean,,1999,0.485
-ZZH.LAC,Latin America and the Caribbean,,2000,0.481
-ZZH.LAC,Latin America and the Caribbean,,2001,0.478
-ZZH.LAC,Latin America and the Caribbean,,2002,0.47
-ZZH.LAC,Latin America and the Caribbean,,2003,0.458
-ZZH.LAC,Latin America and the Caribbean,,2004,0.455
-ZZH.LAC,Latin America and the Caribbean,,2005,0.448
-ZZH.LAC,Latin America and the Caribbean,,2006,0.446
-ZZH.LAC,Latin America and the Caribbean,,2007,0.444
-ZZH.LAC,Latin America and the Caribbean,,2008,0.44
-ZZH.LAC,Latin America and the Caribbean,,2009,0.434
-ZZH.LAC,Latin America and the Caribbean,,2010,0.431
-ZZH.LAC,Latin America and the Caribbean,,2011,0.429
-ZZH.LAC,Latin America and the Caribbean,,2012,0.422
-ZZH.LAC,Latin America and the Caribbean,,2013,0.419
-ZZH.LAC,Latin America and the Caribbean,,2014,0.413
-ZZH.LAC,Latin America and the Caribbean,,2015,0.408
-ZZH.LAC,Latin America and the Caribbean,,2016,0.404
-ZZH.LAC,Latin America and the Caribbean,,2017,0.4
-ZZH.LAC,Latin America and the Caribbean,,2018,0.393
-ZZH.LAC,Latin America and the Caribbean,,2019,0.39
-ZZH.LAC,Latin America and the Caribbean,,2020,0.395
-ZZH.LAC,Latin America and the Caribbean,,2021,0.39
-ZZH.LAC,Latin America and the Caribbean,,2022,0.385
-ZZH.LAC,Latin America and the Caribbean,,2023,0.384
+ZZH.LAC,Latin America & Caribbean,,1990,0.555
+ZZH.LAC,Latin America & Caribbean,,1991,0.544
+ZZH.LAC,Latin America & Caribbean,,1992,0.536
+ZZH.LAC,Latin America & Caribbean,,1993,0.534
+ZZH.LAC,Latin America & Caribbean,,1994,0.529
+ZZH.LAC,Latin America & Caribbean,,1995,0.521
+ZZH.LAC,Latin America & Caribbean,,1996,0.514
+ZZH.LAC,Latin America & Caribbean,,1997,0.508
+ZZH.LAC,Latin America & Caribbean,,1998,0.495
+ZZH.LAC,Latin America & Caribbean,,1999,0.485
+ZZH.LAC,Latin America & Caribbean,,2000,0.481
+ZZH.LAC,Latin America & Caribbean,,2001,0.478
+ZZH.LAC,Latin America & Caribbean,,2002,0.47
+ZZH.LAC,Latin America & Caribbean,,2003,0.458
+ZZH.LAC,Latin America & Caribbean,,2004,0.455
+ZZH.LAC,Latin America & Caribbean,,2005,0.448
+ZZH.LAC,Latin America & Caribbean,,2006,0.446
+ZZH.LAC,Latin America & Caribbean,,2007,0.444
+ZZH.LAC,Latin America & Caribbean,,2008,0.44
+ZZH.LAC,Latin America & Caribbean,,2009,0.434
+ZZH.LAC,Latin America & Caribbean,,2010,0.431
+ZZH.LAC,Latin America & Caribbean,,2011,0.429
+ZZH.LAC,Latin America & Caribbean,,2012,0.422
+ZZH.LAC,Latin America & Caribbean,,2013,0.419
+ZZH.LAC,Latin America & Caribbean,,2014,0.413
+ZZH.LAC,Latin America & Caribbean,,2015,0.408
+ZZH.LAC,Latin America & Caribbean,,2016,0.404
+ZZH.LAC,Latin America & Caribbean,,2017,0.4
+ZZH.LAC,Latin America & Caribbean,,2018,0.393
+ZZH.LAC,Latin America & Caribbean,,2019,0.39
+ZZH.LAC,Latin America & Caribbean,,2020,0.395
+ZZH.LAC,Latin America & Caribbean,,2021,0.39
+ZZH.LAC,Latin America & Caribbean,,2022,0.385
+ZZH.LAC,Latin America & Caribbean,,2023,0.384
 LVA,Latvia,,1997,0.337
 LVA,Latvia,,1998,0.329
 LVA,Latvia,,1999,0.277
@@ -4911,4 +4911,5 @@ ZWE,Zimbabwe,SSA,2019,0.525
 ZWE,Zimbabwe,SSA,2020,0.519
 ZWE,Zimbabwe,SSA,2021,0.519
 ZWE,Zimbabwe,SSA,2022,0.52
+
 ZWE,Zimbabwe,SSA,2023,0.519
