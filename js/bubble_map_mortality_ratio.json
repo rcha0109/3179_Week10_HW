@@ -108,7 +108,7 @@
         "size": {"field": "Value", "type": "quantitative", "scale": {"range": [200,2000]}},
         "tooltip": [
           {"field": "Country Name", "title": "Region"},
-          {"field": "Value", "title": "MMR (per 100k live births)"}
+          {"field": "Value", "title": "MMR (per 100,000 live births)"}
         ]
       }
     },
