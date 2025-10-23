@@ -104,3 +104,10 @@
   color: #222;
   border-radius: 4px;
 }
+
+.small-font {
+  font-size: 14px;
+  font-style: italic;
+  color: gray;
+  line-height: 1.2;
+}
