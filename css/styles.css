@@ -1,74 +1,106 @@
-* {
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    background-color: white;
-}
-
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    color: #1b1b1b;
-    text-align: center; /* center main heading */
+.vis-container {
+  width: 100%;
 }
 
 .page {
-    max-width: 850px;      /* keeps container from being too wide */
-    width: 90%;            /* responsive width */
-    background-color: white;
-    margin: 0 auto;        /* center horizontally */
-    padding: 50px 20px 50px 20px; /* top, sides, bottom */
+  width: 1024px;
+  background-color: white;
+  margin: auto;
+  padding: 50px;
+  padding-top: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-.chart-card {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    text-align: center;    /* center content inside the card */
+.hr3 {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, transparent, #DDD, transparent);
+  padding-top: 5px;
 }
 
-.chart-card h2 {
-    margin-bottom: 10px;
+.description-right {
+  padding: 20px;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-.chart-card p {
-    margin-bottom: 15px;
+.banner-container {
+  position: relative;
+  width: 1024px;
+  margin: auto;
+  overflow: hidden;
 }
-
-/* Center Vega charts */
-.vis-container {
-    display: inline-block; /* shrink-wrap to content */
-    max-width: 100%;
-    height: 500px;
-    margin: 0 auto;        /* center horizontally */
-}
-
-.section {
-  margin-bottom: 60px; /* space between sections */
-}
-
-.section h2 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.section p {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.vis-container {
-  display: block;
+.banner-image {
   width: 100%;
-  max-width: 100%;
-  height: 500px;
-  margin: 0 auto; /* center charts horizontally */
+  height: 150px;
+  display: block;
 }
 
+.main-title {
+  position: absolute;
+  top: 50%;
+  left: 280px;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+.chart-title {
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: left;
+  margin-bottom: 20px; 
+}
+
+.chart-title h3 {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+  line-height: 1.1;
+  margin-top: 20px;
+}
+
+.chart-title .subtitle {
+  font-size: 14px;
+  font-style: italic;
+  color: gray;
+  margin-top: 2px;
+  margin-bottom: 0;
+  line-height: 1.0;
+}
+
+.chart-second-title {
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: left;
+  margin-bottom: 25px; 
+}
+
+.chart-second-title h3 {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+  line-height: 1.1;
+  margin-top: 20px;
+}
+
+.chart-second-title .subtitle {
+  font-size: 14px;
+  font-style: italic;
+  color: gray;
+  margin-top: 2px;
+  margin-bottom: 0;
+  line-height: 1.0;
+}
+
+.pink-gradient-banner {
+  display: inline-block; 
+  background: linear-gradient(to right, #ffa3ca 0%, #fac3cc 70%, transparent 100%);
+  padding: 5px 10px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  color: #222;
+  border-radius: 4px;
+}
