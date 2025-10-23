@@ -3,25 +3,31 @@
     "data": {
       "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/WorkforceRepresentation.csv"
     },
-    "title": "Drop to the Top by Industry",
     "width": "container",
-    "height": 300,
-    "mark": "bar",
+    "height": 290,
+    "mark": {
+      "type": "bar",
+      "color": "#f9b4d2"
+    },
     "encoding": {
       "y": {
         "field": "Industry",
         "type": "nominal",
         "sort": "-x",
-        "title": null
+        "title": null,
+        "axis": {
+          "labelLimit": 1000,
+          "labelFontSize": 11
+        }
       },
       "x": {
         "field": "Drop to the top",
         "type": "quantitative",
-        "title": "Drop to the Top (percentage points)"
+        "title": "Drop to the Top (%)"
       },
       "tooltip": [
         {"field": "Industry"},
-        {"field": "Drop to the top", "title": "Drop to the Top (pp)", "format": ".1f"}
+        {"field": "Drop to the top", "title": "Drop to the Top (%)", "format": ".1f"}
       ]
     }
   }

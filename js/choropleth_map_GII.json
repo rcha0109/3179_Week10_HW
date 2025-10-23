@@ -6,10 +6,9 @@
   },
   "vconcat": [
     {
-      "title": {"text": "Gender Inequality Index by Country from 1990 to 2025", "anchor": "start"},
-      "width": "container",
-      "height": 300,
-      "projection": {"type": "equalEarth"},
+      "width": 838,
+      "height": 350,
+      "projection": {"type": "equalEarth"}, 
       "transform": [
         {"filter": {"param": "year_brush"}},
         {
@@ -66,15 +65,24 @@
       ]
     },
     {
-      "width": "container",
-      "height": 60,
+      "width": 838,
+      "height": 55,
       "mark": "line",
-      "title": "Use this line chart to filter out the data based on time",
+      "title": {
+        "text": "Use this world average line chart to filter data by year.",
+        "font": "Nunito Sans",
+        "fontSize": 15,
+        "fontWeight": 700,
+        "offset": 3
+      },
       "params": [
         {
           "name": "year_brush",
           "select": {"type": "interval", "encodings": ["x"]}
         }
+      ],
+      "transform": [
+        {"filter": "datum.country == 'World'"}
       ],
       "encoding": {
         "x": {
@@ -84,20 +92,32 @@
         },
         "y": {
           "field": "gii",
-          "aggregate": "mean",
+          "type": "quantitative",
           "title": "Gender Inequality Index"
         },
         "color": {"value": "#d73027"}
       }
     },
     {
-      "width": "container",
-      "height": 170,
+      "width": 838,
+      "height": 150,
       "mark": {
         "type": "line",
         "point": true
       },
-      "title": "Average Gender Inequality Index by Region",
+      "title": {
+            "text": "Tracking Regional Gender Gaps",
+            "subtitle": "Comparing gender disparities across decades and regions.",
+            "anchor": "start",
+            "font": "Nunito Sans",
+            "fontSize": 20,
+            "fontWeight": 700,
+            "subtitleFont": "Nunito Sans",
+            "subtitleFontSize": 14,
+            "subtitleFontStyle": "italic",
+            "subtitleColor": "gray",
+            "offset": 15
+          },
       "params": [
         {
           "name": "year_brush",
@@ -106,12 +126,6 @@
       ],
       "transform": [
         {"filter": {"param": "year_brush"}},
-        {
-          "aggregate": [
-            {"op": "mean", "field": "gii", "as": "avg_gii"}
-          ],
-          "groupby": ["country", "year"]
-        },
         {"filter": "datum.country != null"}
       ],
       "encoding": {
@@ -121,7 +135,7 @@
           "axis": {"title": "Year"}
         },
         "y": {
-          "field": "avg_gii",
+          "field": "gii",
           "type": "quantitative",
           "title": "Gender Inequality Index"
         },
@@ -130,27 +144,23 @@
           "type": "nominal",
           "title": "Region",
           "scale": {
-              "domain": [
-                "Arab States",
-                "East Asia and the Pacific",
-                "Europe and Central Asia",
-                "Latin America and the Caribbean",
-                "South Asia",
-                "Sub-Saharan Africa"
-              ],
-              "range": ["#1b9e77", "#ff7f0e", "#7570b3", "#e7298a", "#66a61e", "#e6ab02"]
-            }
+            "domain": [
+              "Middle East & North Africa",
+              "East Asia & Pacific",
+              "Europe & Central Asia",
+              "Latin America & Caribbean",
+              "South Asia",
+              "Sub-Saharan Africa"
+            ],
+            "range": ["#1b9e77", "#ff7f0e", "#7570b3", "#e7298a", "#66a61e", "#e6ab02"]
+          }
         },
         "tooltip": [
           {"field": "country", "type": "nominal", "title": "Region"},
           {"field": "year", "type": "ordinal", "title": "Year"},
-          {"field": "avg_gii", "type": "quantitative", "title": "Gender Inequality Index"}
+          {"field": "gii", "type": "quantitative", "title": "Gender Inequality Index"}
         ]
       }
     }
-  ],
-  "config": {
-    "title": {"font": "sans-serif", "fontSize": 14},
-    "axis": {"labelFont": "sans-serif", "titleFont": "sans-serif"}
-  }
+  ]
 }

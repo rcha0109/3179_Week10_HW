@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Maternal Mortality Ratio by Country (2023)",
   "width": "container",
   "height": 400,
   "projection": {"type": "equalEarth"},
@@ -54,12 +53,12 @@
           "title": "Region",
           "scale": {
             "domain": ["East Asia & Pacific","Europe & Central Asia","Latin America & Caribbean","Middle East & North Africa","North America","South Asia","Sub-Saharan Africa"],
-            "range": ["#cba3e1","#8B4513","#abdda4","#fee08b","#3288bd","#fdae61","#ffc0cb"]
+            "range": ["#ff7f0e","#7570b3","#e7298a","#1b9e77","#3288bd","#66a61e","#e6ab02"]
           }
         },
         "tooltip": [
           {"field": "Country Name", "title": "Country"},
-          {"field": "MMR", "title": "MMR (per 100k live births)"},
+          {"field": "MMR", "title": "MMR (per 100,000 births)"},
           {"field": "region_group", "title": "Region"}
         ],
         "stroke": {"condition": {"selection": "hover_country", "value": "white"}, "value": "white"},

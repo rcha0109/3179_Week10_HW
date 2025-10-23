@@ -1,8 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Women's Representation: Leadership vs Overall Workforce",
   "width": "container",
-  "height": 370,
+  "height": 320,
   "data": {
     "url": "https://raw.githubusercontent.com/rcha0109/3179_Week10_HW/main/data/WorkforceRepresentation.csv"
   },
@@ -27,7 +26,11 @@
       "field": "Industry",
       "type": "nominal",
       "sort": {"field": "All", "order": "descending"},
-      "title": null
+      "title": null,
+      "axis": {
+        "labelLimit": 1000,
+        "labelFontSize": 11
+      }
     },
     "x": {
       "field": "Value",
@@ -46,7 +49,7 @@
           {"field": "Industry", "title": "Industry"},
           {"field": "All", "title": "All Women (%)", "format": ".1f"},
           {"field": "Leadership", "title": "Leadership (%)", "format": ".1f"},
-          {"field": "Drop to the top", "title": "Drop to the Top (pp)", "format": ".1f"}
+          {"field": "Drop to the top", "title": "Drop to the Top (%)", "format": ".1f"}
         ]
       }
     },
@@ -58,14 +61,17 @@
         "color": {
           "field": "Category",
           "type": "nominal",
-          "scale": {"domain": ["All", "Leadership"], "range": ["#f9b4d2", "#d12d74"]},
+          "scale": {
+            "domain": ["All", "Leadership"], 
+            "range": ["#f9b4d2", "#d12d74"]
+          },
           "legend": {"title": null}
         },
         "tooltip": [
           {"field": "Industry", "title": "Industry"},
           {"field": "Category", "title": "Category"},
           {"field": "Value", "title": "Women (%)", "format": ".1f"},
-          {"field": "Drop to the top", "title": "Drop to the Top (pp)", "format": ".1f"}
+          {"field": "Drop to the top", "title": "Drop to the Top (%)", "format": ".1f"}
         ]
       }
     }
